@@ -14,7 +14,7 @@
     html {
         font-family: "Open Sans", sans-serif;
         color: var(--black);
-        font-weight: 400;
+        font-weight: 100;
     }
     .page__logo::before {
         content: "";
@@ -38,5 +38,27 @@
 /* VRSTVA PRO VAŠE STYLY */
 @layer design {
    
+    .page__header {
+        padding-left: calc(1em + 5%);
+        /*padding-bottom: calc(1em + 5%);*/
+        background-image: url("../images/header-2560w.webp");
+        background-size: cover;
+        background-position: top center;
+        color: var(--light);
+    }
+
+    .page__intro {
+        max-width: 45em;
+    }
+
+    .img-responsive {
+        display: block;
+        width: 100%;
+    }
+
+    .page__content{
+        max-width: 50em;
+        margin: auto;
+    }
 
 }
