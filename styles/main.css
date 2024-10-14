@@ -16,15 +16,10 @@
         color: var(--black);
         font-weight: 100;
     }
-    .page__logo::before {
+    .page__logo {
         content: "";
         display: block;
         background: center / contain no-repeat transparent;
-        /*
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        */
         background-image: url("../images/logo.svg");
         width: 2em;
         height: 1em;
@@ -38,6 +33,71 @@
 /* VRSTVA PRO VAŠE STYLY */
 @layer design {
    
+    .img-responsive {
+        display: block;
+        width: 100%;
+    }
+    
+    .button {
+        display: inline-block;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        border-radius: 0.25em;
+    }
+
+    .button--secondary {
+        background-color: var(--light);
+        color: var(--black);
+    }
+
+    .button--secondary:hover {
+        background-color: var(--gray);
+        color: var(--light);
+    }
+
+    .button--primary {
+        background-color: var(--primary);
+        color: var(--light);
+    }
+
+    .button--primary:hover {
+        background-color: var(--light);
+        color: var(--primary);
+    }
+
+    .picture-box {
+        margin: 1em 0;
+    }
+
+    .picture-box__caption {
+        margin: 1em 0;
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    .h3 {
+        font-size: 1.1em;
+        font-weight: bold;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    .highlight-box {
+        padding: 2em;
+        border: var(--primary) 2px solid;
+    }
+
+    .list > li {
+        margin: 0.5em 0;
+    }
+
+    .list > li::marker {
+        color: var(--primary);
+    }
+
+
     .page__header {
         padding-left: calc(1em + 5%);
         /*padding-bottom: calc(1em + 5%);*/
@@ -45,10 +105,12 @@
         background-size: cover;
         background-position: top center;
         color: var(--light);
+        padding-top: 30em;
     }
 
     .page__intro {
         max-width: 45em;
+        padding-bottom: 10em;
     }
 
     .img-responsive {
@@ -57,7 +119,7 @@
     }
 
     .page__content{
-        max-width: 50em;
+        max-width: 60em;
         margin: auto;
     }
 
