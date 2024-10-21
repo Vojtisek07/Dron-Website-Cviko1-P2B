@@ -97,15 +97,41 @@
         color: var(--primary);
     }
 
+    .panel {
+        max-width: 25em;
+        display: inline-block;
+        vertical-align: 100%;
+    }
+
+    .gallery {
+        --marginOkraj: 1em;
+        margin: calc(-1 * var(--marginOkraj));
+    }
+
+    .gallery__item {
+        display: inline-block;
+        width: calc(100% - 2 * var(--marginOkraj));
+        margin: var(--marginOkraj);
+    }
+
+    @media screen and (min-width: 768px) {
+        .gallery_item--50w{
+            width: calc(50% - 2 * var(--marginOkraj));
+        }
+    }
 
     .page__header {
+        padding-top: 30em;
         padding-left: calc(1em + 5%);
-        /*padding-bottom: calc(1em + 5%);*/
+        padding-bottom: calc(1em + 5%);
         background-image: url("../images/header-2560w.webp");
         background-size: cover;
         background-position: top center;
         color: var(--light);
-        padding-top: 30em;
+    }
+
+    .page__section {
+        padding: 1em;
     }
 
     .page__intro {
